@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>oyku_description</name>
+  <version>0.0.1</version>
+  <description>
+      oyku bot urdf model
+  </description>
+
+  <maintainer email="olima_84@yahoo.com">Oscar Lima</maintainer>
+
+  <license>MIT</license>
+  
+  <author email="olima_84@yahoo.com">Oscar Lima</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+    
+  <run_depend>urdf</run_depend>
+  <run_depend>xacro</run_depend>
+
+</package>
