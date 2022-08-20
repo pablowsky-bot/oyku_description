@@ -87,15 +87,15 @@
     <joint name="base_link_to_${wheel_name}" type="continuous">
       <parent link="base_link"/>
       <child link="${wheel_name}"/>
-      <origin xyz="${x} ${y} 0" rpy="0 1.57 0"/>
+      <origin xyz="${x} ${y} 0" rpy="0 1.57 1.57"/>
       <axis xyz="0 0 1"/>
     </joint>
   </xacro:macro>
 
-  <xacro:oyku_wheel wheel_name="wheel_fl" x="${-lx}" y="${ly}" />
-  <xacro:oyku_wheel wheel_name="wheel_fr" x="${lx}" y="${ly}" />
-  <xacro:oyku_wheel wheel_name="wheel_rl" x="${-lx}" y="${-ly}" />
-  <xacro:oyku_wheel wheel_name="wheel_rr" x="${lx}" y="${-ly}" />
+  <xacro:oyku_wheel wheel_name="wheel_fl" x="${ly}" y="${lx}" />
+  <xacro:oyku_wheel wheel_name="wheel_fr" x="${ly}" y="${-lx}" />
+  <xacro:oyku_wheel wheel_name="wheel_rl" x="${-ly}" y="${lx}" />
+  <xacro:oyku_wheel wheel_name="wheel_rr" x="${-ly}" y="${-lx}" />
 
   <link name="lidar">
     <visual>
@@ -125,7 +125,7 @@
   <joint name="scan_joint" type="fixed">
     <parent link="base_link"/>
     <child link="lidar"/>
-    <origin xyz="0 0.05 0.1375" rpy="0 0 -1.5708"/>
+    <origin xyz="0.05 0 0.1375" rpy="0 0 0"/>
   </joint>
 
 </robot>
